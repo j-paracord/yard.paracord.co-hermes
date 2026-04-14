@@ -1,12 +1,56 @@
 # .pull-ignore — extra patterns to skip when pulling from remote
 # Uses rsync exclude syntax (similar to .gitignore).
 #
-# The following are always excluded (hardcoded):
-#   .git/  .ssh/  __pycache__/  *.pyc  .env  agent.toml
-#   config.yaml  SOUL.md  node_modules/
+# The following are always excluded (hardcoded — see PULL_BASE_EXCLUDES):
+#   .git/  .ssh/  __pycache__/  *.pyc  .env  agent.toml  config.yaml  SOUL.md
+#   node_modules/  auth.json  auth.lock  gateway.pid  gateway_state.json
+#   processes.json  channel_directory.json  models_dev_cache.json
+#   .skills_prompt_snapshot.json  state.db*  response_store.db*
+#   *-remote-conflict*  shared  *.local-backup
 #
-# Add your own patterns below:
+# Everything below is ACTIVE by default — comment a line out (add `#`) if you
+# want a specific directory or bundled skill mirrored locally. Defaults keep
+# hermes-agent internals (logs, sessions, workspace) and the upstream bundled
+# skills out of your repo so `hm sync` doesn't pull hundreds of regenerated
+# files on every run.
 
-# logs/
-# sessions/
-# workspace/
+# --- hermes runtime directories (heavy, regenerated) ------------------------
+bin/
+cache/
+cron/
+home/
+logs/
+plans/
+platforms/
+sandboxes/
+sessions/
+skins/
+workspace/
+
+# --- hermes bundled skills (ship with hermes-agent; comment a line out to
+#     pull that skill locally if you want to fork / customise it) ----------
+skills/apple/
+skills/autonomous-ai-agents/
+skills/creative/
+skills/data-science/
+skills/devops/
+skills/diagramming/
+skills/dogfood/
+skills/domain/
+skills/email/
+skills/feeds/
+skills/gaming/
+skills/gifs/
+skills/github/
+skills/inference-sh/
+skills/leisure/
+skills/mcp/
+skills/media/
+skills/mlops/
+skills/note-taking/
+skills/productivity/
+skills/red-teaming/
+skills/research/
+skills/smart-home/
+skills/social-media/
+skills/software-development/
