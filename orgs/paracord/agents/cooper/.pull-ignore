@@ -1,0 +1,12 @@
+# .pull-ignore — extra patterns to skip when pulling from remote
+# Uses rsync exclude syntax (similar to .gitignore).
+#
+# The following are always excluded (hardcoded):
+#   .git/  .ssh/  __pycache__/  *.pyc  .env  agent.toml
+#   config.yaml  SOUL.md  node_modules/
+#
+# Add your own patterns below:
+
+# logs/
+# sessions/
+# workspace/

@@ -18,7 +18,7 @@
 # model.default at load time (see hermes_cli/runtime_provider.py::_get_model_config).
 # NOTE: there is NO `model.name` key — that is a hermes-manager typo, not a real field.
 model:
-  default: anthropic/claude-haiku-4.5
+  default: "anthropic/claude-haiku-4.5"
   # default: "google/gemma-4-26b-a4b-it:free"
   # 
   # Inference provider. "auto" picks the best available credential from .env.

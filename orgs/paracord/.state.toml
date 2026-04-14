@@ -4,10 +4,18 @@ public_ip = "143.198.231.232"
 private_ip = "10.124.0.2"
 provisioned_at = "2026-04-14T04:33:49.143Z"
 hermes_installed = true
-hermes_installed_at = "2026-04-14T04:40:23.292Z"
+hermes_installed_at = "2026-04-14T06:41:35.256Z"
 
 [agents.cooper]
 vm_name = "paracord1"
-last_synced_at = "2026-04-14T05:13:58.747Z"
+linux_user = "hm-cooper"
+last_synced_at = "2026-04-14T07:19:35.645Z"
+hermes_profile_created = true
+gateway_installed = true
+
+[agents.troy]
+vm_name = "paracord1"
+linux_user = "hm-troy"
+last_synced_at = "2026-04-14T07:21:54.476Z"
 hermes_profile_created = true
 gateway_installed = true
