@@ -27,8 +27,7 @@ sessions/
 skins/
 workspace/
 
-# --- hermes bundled skills (ship with hermes-agent; comment a line out to
-#     pull that skill locally if you want to fork / customise it) ----------
+skills/.bundled_manifest
 skills/apple/
 skills/autonomous-ai-agents/
 skills/creative/
