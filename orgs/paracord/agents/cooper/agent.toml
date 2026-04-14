@@ -1,0 +1,15 @@
+# hermes-manager agent definition
+#
+# Each agent is a hermes profile on the parent org's droplet, identified
+# permanently by its email address (like a GCP service account).
+#
+# Run `hm sync <org>/<agent>` to apply changes.
+
+name = "cooper"
+email = "cooper@agents.paracord.run"
+uid = "06c75e"
+owner = "justin@paracord.co"
+
+[gateway]
+enabled = true
+port = 0

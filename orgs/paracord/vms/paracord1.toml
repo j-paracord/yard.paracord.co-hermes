@@ -1,0 +1,24 @@
+name = "paracord1"
+provider = "digitalocean"
+active = true
+
+[capacity]
+max_agents = 5
+
+[digitalocean]
+region = "sfo3"
+size = "s-2vcpu-4gb"
+image = "ubuntu-24-04-x64"
+ipv6 = true
+monitoring = false
+backups = false
+
+[ssh]
+private_key_path = "/Users/jmitch/Dev/paracord/yard.paracord.co/.ssh/yard_ed25519"
+use_public_ip = true
+
+[caddy]
+email = "yard-hermes-manager@paracord.run"
+
+[hermes]
+install_url = "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh"

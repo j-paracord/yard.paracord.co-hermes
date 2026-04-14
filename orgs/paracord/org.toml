@@ -1,0 +1,20 @@
+name = "paracord"
+
+[domains]
+primary = "paracord.co"
+aliases = []
+agents = "agents.paracord.run"
+
+[droplet]
+region = "SFO2"
+size = "s-1vcpu-1gb"
+image = "ubuntu-24-04-x64"
+monitoring = false
+backups = false
+ipv6 = true
+
+[hermes]
+install_url = "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh"
+
+[caddy]
+email = "yard-hermes-manager@paracord.run"

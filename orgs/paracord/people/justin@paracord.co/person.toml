@@ -1,0 +1,9 @@
+name = "Justin Mitchel"
+email = "justin@paracord.co"
+role = "admin"
+
+[identities]
+slack="U0AE3KVN691"
+# discord = "123456789"
+# telegram = "username"
+github = "j-paracord"

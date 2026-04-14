@@ -1,0 +1,13 @@
+[vms.paracord1]
+droplet_id = 564_805_964
+public_ip = "143.198.231.232"
+private_ip = "10.124.0.2"
+provisioned_at = "2026-04-14T04:33:49.143Z"
+hermes_installed = true
+hermes_installed_at = "2026-04-14T04:40:23.292Z"
+
+[agents.cooper]
+vm_name = "paracord1"
+last_synced_at = "2026-04-14T05:13:58.747Z"
+hermes_profile_created = true
+gateway_installed = true

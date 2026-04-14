@@ -1,0 +1,10 @@
+.claude
+
+# secrets — never commit
+.env
+.env.local
+orgs/*/agents/*/.env
+orgs/**/.env.local
+
+# local state
+.DS_Store
