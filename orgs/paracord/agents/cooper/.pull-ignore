@@ -10,3 +10,6 @@
 # logs/
 # sessions/
 # workspace/
+auth.json
+auth.lock
+shared/

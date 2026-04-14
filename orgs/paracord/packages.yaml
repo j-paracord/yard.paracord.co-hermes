@@ -1,0 +1,35 @@
+# System-wide packages installed on every VM in this org by `hm sync`.
+#
+# Two ways to declare a package:
+#
+# 1. Built-in recipe — just name it. Known names:
+#      gh, nodejs, uv, docker, python3, jq, ripgrep, build-essential, git, curl
+#
+# 2. Custom — supply `install`, `check`, and optionally `upgrade_cmd`.
+#    `check` should exit 0 when the tool is already present.
+#
+# Set `upgrade: true` to try to upgrade on every sync. Otherwise packages are
+# "install-if-missing". Use `hm sync --upgrade-packages` for a one-off
+# upgrade of everything without editing this file.
+
+packages:
+  - name: git
+  - name: curl
+  - name: jq
+  - name: ripgrep
+  - name: build-essential
+
+  - name: gh
+
+  - name: nodejs
+
+  - name: postgresql-client
+    type: apt
+
+  - name: uv
+    # Spelled out as an example of a custom script entry. Equivalent to just
+    # `- name: uv` since `uv` is in the built-in recipe registry.
+    type: script
+    install: curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR=/usr/local/bin sh
+    check: command -v uv
+    upgrade_cmd: uv self update

@@ -1,0 +1,16 @@
+# Skill metadata — read by hermes-manager only.
+# This file is stripped from rsync and never lands on the VM.
+
+name = "ghost-research"
+description = "Query ghost.build Postgres for GitHub trending repos, Hacker News data, and other daily research signals."
+version = "0.1.0"
+
+[env]
+# Keys the skill expects to find in the agent's .env.
+# `hm agent skill add` appends stubs for any that are missing.
+required = ["GHOST_DATABASE_URL"]
+
+[deps]
+# System packages the skill needs on the agent's VM.
+# Warned about (not installed) at `hm sync` time.
+apt = ["postgresql-client"]

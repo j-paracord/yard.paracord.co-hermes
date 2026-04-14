@@ -9,13 +9,13 @@ hermes_installed_at = "2026-04-14T06:41:35.256Z"
 [agents.cooper]
 vm_name = "paracord1"
 linux_user = "hm-cooper"
-last_synced_at = "2026-04-14T07:19:35.645Z"
+last_synced_at = "2026-04-14T16:57:52.457Z"
 hermes_profile_created = true
 gateway_installed = true
 
 [agents.troy]
 vm_name = "paracord1"
 linux_user = "hm-troy"
-last_synced_at = "2026-04-14T07:21:54.476Z"
+last_synced_at = "2026-04-14T16:58:07.137Z"
 hermes_profile_created = true
 gateway_installed = true

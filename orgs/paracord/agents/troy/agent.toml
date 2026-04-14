@@ -10,6 +10,8 @@ email = "troy@agents.paracord.run"
 uid = "81bbff"
 owner = "justin@paracord.co"
 
+skills = ["ghost-research"]
+
 [gateway]
 enabled = true
 port = 0
