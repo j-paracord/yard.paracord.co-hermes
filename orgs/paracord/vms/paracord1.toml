@@ -14,7 +14,7 @@ monitoring = false
 backups = false
 
 [ssh]
-private_key_path = "/Users/jmitch/Dev/paracord/yard.paracord.co/.ssh/yard_ed25519"
+private_key_path = "/Users/jmitch/Dev/paracord/yard-hermes/.ssh/yard_ed25519"
 use_public_ip = true
 
 [caddy]
