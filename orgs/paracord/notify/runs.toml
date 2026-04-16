@@ -1,0 +1,7 @@
+[notify]
+name = "runs"
+agents = [ "cooper" ]
+retention = "7d"
+
+  [notify.channel]
+  type = "stdout"
