@@ -6,7 +6,7 @@
 # Run `hm sync <org>/<agent>` to apply changes.
 
 name = "cooper"
-email = "cooper@agents.paracord.run"
+email = "cooper@paracord.run"
 uid = "06c75e"
 owner = "justin@paracord.co"
 
@@ -15,3 +15,13 @@ skills = ["ghost-research"]
 [gateway]
 enabled = true
 port = 0
+
+
+[router.sources.inbox]
+enabled = true
+api_key_env = "PARACORD_INBOX_API_KEY"
+
+
+[tasks.ui.slack]
+channel_id = "C0ASJ9NMDTR"
+managers = ["U0AE3KVN691"]
