@@ -8,3 +8,9 @@ orgs/**/.env.local
 
 # local state
 .DS_Store
+
+# agent runtime artifacts (regenerated on agent start/shutdown)
+orgs/*/agents/*/.hermes_history
+orgs/*/agents/*/.clean_shutdown
+orgs/*/agents/*/.update_check
+orgs/*/agents/*/interrupt_debug.log

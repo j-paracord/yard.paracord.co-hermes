@@ -27,6 +27,12 @@ sessions/
 skins/
 workspace/
 
+# --- hermes runtime artifacts (regenerated on agent start/shutdown) --------
+.hermes_history
+.clean_shutdown
+.update_check
+interrupt_debug.log
+
 # --- hermes bundled skills (ship with hermes-agent; comment a line out to
 #     pull that skill locally if you want to fork / customise it) ----------
 skills/apple/
