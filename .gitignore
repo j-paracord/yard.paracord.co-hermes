@@ -1,5 +1,5 @@
 .claude
-
+.ssh
 # secrets — never commit
 .env
 .env.local
