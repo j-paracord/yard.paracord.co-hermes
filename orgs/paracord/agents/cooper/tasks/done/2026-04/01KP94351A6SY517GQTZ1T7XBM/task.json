@@ -1,0 +1,33 @@
+{
+  "id": "01KP94351A6SY517GQTZ1T7XBM",
+  "schema_version": 1,
+  "created_at": "2026-04-15T17:47:44.554Z",
+  "updated_at": "2026-04-15T17:48:55.136Z",
+  "source": {
+    "kind": "user",
+    "ref": "manual-1776275264554",
+    "received_at": "2026-04-15T17:47:44.553Z",
+    "payload": {
+      "from": "j@paracord.co",
+      "subject": "hi",
+      "body": "morning test"
+    }
+  },
+  "classification": {
+    "tier": 2,
+    "kind": "actionable-requested",
+    "summary": "hi",
+    "reasoning": "human classification via CLI",
+    "urgency": "normal",
+    "confidence": "high",
+    "ask_user": null,
+    "classified_at": "2026-04-15T17:48:29.445Z",
+    "classified_by": "cli:local"
+  },
+  "status": {
+    "state": "cancelled",
+    "entered_at": "2026-04-15T17:48:55.135Z"
+  },
+  "wiki_refs": [],
+  "spawned": []
+}

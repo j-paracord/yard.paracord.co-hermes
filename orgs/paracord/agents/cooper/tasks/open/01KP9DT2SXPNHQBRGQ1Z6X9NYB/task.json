@@ -1,0 +1,31 @@
+{
+  "id": "01KP9DT2SXPNHQBRGQ1Z6X9NYB",
+  "schema_version": 1,
+  "created_at": "2026-04-15T20:37:33.117Z",
+  "updated_at": "2026-04-15T22:04:57.357Z",
+  "source": {
+    "kind": "email",
+    "ref": "<CAB6L-f6M+6Dnruf+6aX=oaHXN8Mw-XZpsRUJVOpSOqqjX-G6vw@mail.gmail.com>",
+    "received_at": "2026-04-15T06:48:13.495Z",
+    "payload": {
+      "from": "j@paracord.co",
+      "subject": "Hello There Cooper",
+      "preview": "How's it feel to be here?\r\n",
+      "channel": "email",
+      "status": "active"
+    }
+  },
+  "classification": null,
+  "status": {
+    "state": "new",
+    "entered_at": "2026-04-15T20:37:33.117Z"
+  },
+  "wiki_refs": [],
+  "spawned": [],
+  "presentation": {
+    "slack": {
+      "channel_id": "C0ASJ9NMDTR",
+      "ts": "1776290697.285089"
+    }
+  }
+}
