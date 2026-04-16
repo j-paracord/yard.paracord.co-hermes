@@ -1,0 +1,8 @@
+agents = { }
+
+[vms.yard-xata]
+hermes_installed = false
+droplet_id = 565_333_452
+public_ip = "161.35.238.63"
+private_ip = "10.124.0.4"
+provisioned_at = "2026-04-16T16:42:58.051Z"

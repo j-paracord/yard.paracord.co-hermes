@@ -1,0 +1,14 @@
+# .sync-ignore — extra patterns to skip when pushing to remote
+# Uses rsync exclude syntax (similar to .gitignore).
+#
+# The following are always excluded (hardcoded — see SYNC_BASE_EXCLUDES):
+#   agent.toml  .git/  .DS_Store  .pull-ignore  .sync-ignore  .delete-list
+#   skill.toml  *.local-backup  auth.json  auth.lock  gateway.pid  gateway_state.json
+#   processes.json  channel_directory.json  models_dev_cache.json
+#   .skills_prompt_snapshot.json  state.db*  response_store.db*
+#   *-remote-conflict*
+#
+# Add your own patterns below:
+
+# *.log
+# tmp/

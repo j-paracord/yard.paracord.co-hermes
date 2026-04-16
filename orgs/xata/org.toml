@@ -1,0 +1,9 @@
+name = "xata"
+
+[domains]
+primary = "xata.io"
+aliases = []
+agents = "xata.paracord.run"
+
+[slack_tasks]
+enabled = true

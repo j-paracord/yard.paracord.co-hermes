@@ -1,0 +1,138 @@
+# hermes profile config — synced to ~/.hermes/profiles/<name>/config.yaml
+#
+# Parsed by hermes-agent (NousResearch/hermes-agent) at profile startup.
+# See cli-config.yaml.example in the hermes-agent repo for the full schema:
+#   https://github.com/NousResearch/hermes-agent/blob/main/cli-config.yaml.example
+# And the user-guide docs:
+#   https://hermes-agent.nousresearch.com/docs/user-guide/configuration/
+#
+# Only non-default values need to be set here. Everything commented out below
+# is shown for reference — hermes picks sensible defaults when keys are absent.
+# Secrets (API keys, bot tokens) belong in ~/.hermes/profiles/<name>/.env, NOT here.
+
+# =============================================================================
+# Model
+# =============================================================================
+# Canonical key is `default` (model.default). `model` is accepted as an alias —
+# `hermes config set model.model <x>` writes to model.model and is promoted to
+# model.default at load time (see hermes_cli/runtime_provider.py::_get_model_config).
+# NOTE: there is NO `model.name` key — that is a hermes-manager typo, not a real field.
+model:
+  default: "anthropic/claude-haiku-4-5"
+
+  # Inference provider. "auto" picks the best available credential from .env.
+  # Valid: auto | openrouter | nous | nous-api | anthropic | openai-codex |
+  #        copilot | gemini | zai | kimi-coding | minimax | minimax-cn |
+  #        huggingface | xiaomi | kilocode | ai-gateway | custom
+  #        (custom aliases: lmstudio, ollama, vllm, llamacpp)
+  provider: "openrouter"
+
+  # base_url: "https://openrouter.ai/api/v1"  # usually inferred from provider
+  # api_key:  ""                               # prefer setting OPENROUTER_API_KEY in .env
+  # context_length: 131072                     # auto-detected; override only for local servers
+  # max_tokens: 8192                           # output cap; leave unset for model default
+
+# =============================================================================
+# Terminal (command execution backend)
+# =============================================================================
+# Backends: local | ssh | docker | singularity | modal | daytona
+# For droplet-deployed agents, `local` runs commands directly on the VM.
+terminal:
+  backend: "local"
+  cwd: "."            # "." = wherever hermes is launched from
+  timeout: 180        # per-command timeout (seconds)
+  lifetime_seconds: 300
+
+# =============================================================================
+# Agent behavior
+# =============================================================================
+agent:
+  max_turns: 60             # tool-calling iterations per conversation
+  reasoning_effort: "medium"  # xhigh | high | medium | low | minimal | none
+  # verbose: false
+  # gateway_timeout: 1800       # idle timeout for gateway runs (0 = unlimited)
+  # restart_drain_timeout: 60   # graceful drain on gateway stop/restart
+
+# =============================================================================
+# Toolsets (per-platform)
+# =============================================================================
+# Top-level `tools:` is NOT a valid hermes key — it is ignored.
+# Instead configure tools per platform via `platform_toolsets`.
+# Presets: hermes-cli, hermes-telegram, hermes-discord, hermes-whatsapp,
+#          hermes-slack, hermes-signal, hermes-homeassistant.
+# Individual toolsets: web, search, terminal, file, browser, vision, image_gen,
+#          skills, skills_hub, moa, todo, tts, cronjob, rl.
+# Composites: debugging (terminal+web+file), safe (web+vision+moa), all.
+platform_toolsets:
+  cli: [hermes-cli]
+  telegram: [hermes-telegram]
+  discord: [hermes-discord]
+  slack: [hermes-slack]
+
+# =============================================================================
+# Optional sections (uncomment + edit as needed)
+# =============================================================================
+
+platforms:
+  slack:
+    reply_to_mode: "first"
+    extra:
+      reply_in_thread: false
+      reply_broadcast: false
+      
+# --- Context compression (auto-shrink long conversations) --------------------
+# compression:
+#   enabled: true
+#   threshold: 0.50      # compress when prompt hits 50% of context_length
+#   target_ratio: 0.20   # keep 20% of threshold as recent tail
+#   protect_last_n: 20   # always preserve last N messages
+
+# --- Persistent memory -------------------------------------------------------
+# memory:
+#   memory_enabled: true
+#   user_profile_enabled: true
+#   memory_char_limit: 2200
+#   user_char_limit: 1375
+#   nudge_interval: 10
+#   flush_min_turns: 6
+
+# --- Session reset (messaging platforms) -------------------------------------
+# session_reset:
+#   mode: both          # both | idle | daily | none
+#   idle_minutes: 1440
+#   at_hour: 4
+# group_sessions_per_user: true
+
+# --- Gateway streaming (live token streaming on Telegram/Discord/Slack) ------
+# streaming:
+#   enabled: false
+
+# --- Voice transcription -----------------------------------------------------
+# stt:
+#   enabled: true
+#   local:
+#     model: "base"     # tiny | base | small | medium | large-v3 | turbo
+
+# --- Skills ------------------------------------------------------------------
+# skills:
+#   creation_nudge_interval: 15
+#   external_dirs:
+#     - ~/.agents/skills
+
+# --- MCP servers -------------------------------------------------------------
+# mcp_servers:
+#   time:
+#     command: uvx
+#     args: ["mcp-server-time"]
+
+# --- Subagent delegation -----------------------------------------------------
+# delegation:
+#   max_iterations: 50
+#   default_toolsets: ["terminal", "file", "web"]
+
+# --- Display -----------------------------------------------------------------
+# display:
+#   compact: false
+#   tool_progress: all   # off | new | all | verbose
+#   streaming: true
+#   skin: default        # default | ares | mono | slate

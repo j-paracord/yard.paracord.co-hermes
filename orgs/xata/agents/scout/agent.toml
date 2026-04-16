@@ -1,0 +1,15 @@
+# hermes-manager agent definition
+#
+# Each agent is a hermes profile deployed to a VM in this org.
+# The agent's email (<name>@<org.domains.agents>) is its permanent identity.
+#
+# Run `hm sync` to deploy changes.
+
+name = "scout"
+email = "xata-scout@paracord.run"
+uid = "da47d8"
+owner = "justin@paracord.co"
+
+[gateway]
+enabled = true
+port = 0
