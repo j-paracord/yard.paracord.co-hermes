@@ -1,0 +1,5 @@
+[trigger]
+name = "runbooks"
+agents = [ "scout" ]
+retention = "7d"
+notify_channel = "runbook-events"

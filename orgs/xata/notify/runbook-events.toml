@@ -1,0 +1,7 @@
+[notify]
+name = "runbook-events"
+agents = [ "scout" ]
+retention = "7d"
+
+  [notify.channel]
+  type = "stdout"

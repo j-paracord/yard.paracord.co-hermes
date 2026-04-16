@@ -1,8 +1,14 @@
-agents = { }
-
 [vms.yard-xata]
-hermes_installed = false
 droplet_id = 565_333_452
 public_ip = "161.35.238.63"
 private_ip = "10.124.0.4"
 provisioned_at = "2026-04-16T16:42:58.051Z"
+hermes_installed = true
+hermes_installed_at = "2026-04-16T16:50:50.795Z"
+
+[agents.scout]
+vm_name = "yard-xata"
+linux_user = "hm-scout"
+last_synced_at = "2026-04-16T17:18:57.114Z"
+hermes_profile_created = true
+gateway_installed = true
