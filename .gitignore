@@ -14,3 +14,5 @@ orgs/*/agents/*/.hermes_history
 orgs/*/agents/*/.clean_shutdown
 orgs/*/agents/*/.update_check
 orgs/*/agents/*/interrupt_debug.log
+orgs/*/agents/*/.trigger.env
+orgs/*/agents/*/.trigger-state

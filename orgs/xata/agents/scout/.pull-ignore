@@ -26,6 +26,7 @@ sandboxes/
 sessions/
 skins/
 workspace/
+.hermes-history
 
 # --- hermes bundled skills (ship with hermes-agent; comment a line out to
 #     pull that skill locally if you want to fork / customise it) ----------
