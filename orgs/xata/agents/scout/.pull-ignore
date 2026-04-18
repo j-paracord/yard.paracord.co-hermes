@@ -14,6 +14,9 @@
 # skills out of your repo so `hm sync` doesn't pull hundreds of regenerated
 # files on every run.
 
+*.env
+.update_check
+
 # --- hermes runtime directories (heavy, regenerated) ------------------------
 bin/
 cache/
