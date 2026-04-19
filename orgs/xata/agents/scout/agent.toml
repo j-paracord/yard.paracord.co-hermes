@@ -16,4 +16,4 @@ port = 0
 
 [doppler]
 project = "xata-paracord-keys"
-# config = "ops" # inferred from doppler token
+config = "ops" # inferred from doppler token

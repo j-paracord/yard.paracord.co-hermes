@@ -9,6 +9,7 @@ hermes_installed_at = "2026-04-16T16:50:50.795Z"
 [agents.scout]
 vm_name = "yard-xata"
 linux_user = "hm-scout"
-last_synced_at = "2026-04-18T22:13:28.139Z"
+last_synced_at = "2026-04-18T23:01:45.311Z"
 hermes_profile_created = true
 gateway_installed = true
+last_pulled_at = "2026-04-19T17:00:26.363Z"
