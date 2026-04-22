@@ -22,6 +22,8 @@ packages:
   - name: jq
   - name: ripgrep
   - name: build-essential
+  - name: ffmpeg
+    type: apt
 
   - name: gh
 
@@ -56,10 +58,22 @@ packages:
 
   - name: workbooks
     type: script
-    install: curl -fsSL https://get.workbooks.dev | WB_INSTALL_DIR=/usr/local/bin sh 
+    install: curl -fsSL https://get.workbooks.dev | WB_INSTALL_DIR=/usr/local/bin sh
     check: command -v wb
     upgrade: true
-    upgrade_cmd: WB_INSTALL_DIR=/usr/local/bin wb update 
+    upgrade_cmd: WB_INSTALL_DIR=/usr/local/bin wb update
+
+  # Node sidecar for wb's `browser` runtime (Browserbase-backed). Pulls in
+  # `playwright-core` (JS only — no browser binaries). Requires `nodejs`
+  # above for `npm`.`
+  - name: wb-browser-runtime
+
+  # Local Chromium + system deps for Playwright. Opt-in fallback so we
+  # aren't fully dependent on Browserbase. Adds ~500MB–1GB and a long apt
+  # list; only enable on VMs that need it. Agents must set
+  # PLAYWRIGHT_BROWSERS_PATH=/usr/local/share/ms-playwright in their .env
+  # to pick up the shared install.
+  # - name: playwright-chromium
 
   - name: uv
     # Spelled out as an example of a custom script entry. Equivalent to just
