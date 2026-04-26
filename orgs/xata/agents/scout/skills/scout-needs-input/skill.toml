@@ -1,0 +1,14 @@
+# Skill metadata — read by hermes-manager only.
+# This file is stripped from rsync and never lands on the VM.
+
+name = "scout-needs-input"
+description = "Mid-run Q&A: XADD a question to the notify stream, XREAD the reply from the input stream with a 30-min timeout. Operator answers via website run pane or Slack; both surfaces converge here."
+version = "0.1.0"
+
+[env]
+# REDIS_URL points at the same Upstash instance as the trigger/notify
+# streams. The agent's .env already has this — listed for discoverability.
+required = ["REDIS_URL"]
+
+[deps]
+apt = []

@@ -1,0 +1,21 @@
+# Skill metadata — read by hermes-manager only.
+# This file is stripped from rsync and never lands on the VM.
+
+name = "scout-git"
+description = "Use yard git for every op on the xatabase-finance-assistant working copy — mint-token, pull, status. Covers path conventions and the HOME-isolation gotcha."
+version = "0.1.0"
+
+[env]
+# GitHub App credentials are pulled from Doppler at runtime by `yard git`.
+# No .env stubs needed here — listed only so a missing token surfaces
+# loudly instead of a cryptic 401.
+required = [
+  "GITHUB_APP_ID",
+  "GITHUB_APP_INSTALLATION_ID",
+  "GITHUB_APP_PRIVATE_KEY",
+]
+
+[deps]
+# yard binary is deployed to /opt/hermes-manager/tools/ by `hm sync`;
+# no apt deps. Listed here for discoverability.
+apt = []

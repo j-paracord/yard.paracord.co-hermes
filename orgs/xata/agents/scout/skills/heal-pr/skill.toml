@@ -1,0 +1,19 @@
+# Skill metadata — read by hermes-manager only.
+# This file is stripped from rsync and never lands on the VM.
+
+name = "heal-pr"
+description = "End-to-end heal-loop playbook: read a failed runbook + stderr, reproduce the failing step, complete the operator's intent, open a PR with the fix. Invoked by the `heal-runbook` trigger."
+version = "0.1.0"
+
+[env]
+# Same GitHub App creds as scout-git; the REDIS_URL is needed to emit
+# progress on the notify stream while healing.
+required = [
+  "GITHUB_APP_ID",
+  "GITHUB_APP_INSTALLATION_ID",
+  "GITHUB_APP_PRIVATE_KEY",
+  "REDIS_URL",
+]
+
+[deps]
+apt = []

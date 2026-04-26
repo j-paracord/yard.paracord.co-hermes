@@ -17,3 +17,13 @@ port = 0
 [doppler]
 project = "xata-paracord-keys"
 config = "ops" # inferred from doppler token
+
+# Persistent working copy of the runbook source repo. Synced to <branch>
+# before every trigger entry the consumer processes — used by heal-style
+# flows where scout needs the latest runbook source on disk. Auth uses
+# the GitHub App credentials in this profile's .env (mint via `yard git
+# mint-token`). See hermes-manager docs/scout-heal-loop.md.
+[git]
+repo = "paracord-clients/xatabase-finance-assistant"
+# branch defaults to "main"
+# path defaults to /home/hm-scout/repos/xatabase-finance-assistant
