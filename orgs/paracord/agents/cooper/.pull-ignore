@@ -26,6 +26,7 @@ sandboxes/
 sessions/
 skins/
 workspace/
+.router
 
 # --- hermes runtime artifacts (regenerated on agent start/shutdown) --------
 .hermes_history

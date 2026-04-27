@@ -9,7 +9,12 @@ hermes_installed_at = "2026-04-14T06:41:35.256Z"
 [agents.cooper]
 vm_name = "paracord1"
 linux_user = "hm-cooper"
-last_synced_at = "2026-04-27T21:21:39.177Z"
+last_synced_at = "2026-04-27T21:36:05.168Z"
 last_pulled_at = "2026-04-15T21:42:17.970Z"
 hermes_profile_created = true
 gateway_installed = true
+
+  [agents.cooper.synced_files]
+  ".clean_shutdown" = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  ".env" = "520a9e56fbf4307509083df04aefa22fecfd7a6de24fe0c201338d4bd708bb4d"
+  ".update_check" = "db147a3a944e24e397540e11b52006c7d6a2e95442a3d2ba31d3924bc472f103"
