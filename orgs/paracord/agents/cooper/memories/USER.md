@@ -1,3 +1,5 @@
 Technical infrastructure-focused user (Slack workspace, interested in Hermes Agent, MCP servers, AI agent orchestration). Prefers precision and completeness — calls out shortcuts and incomplete answers ("What? You didn't do anything"). Values directness over flowery responses. Appreciates honesty about limitations rather than workarounds. Expects tasks to be completed as requested, not approximated or partially addressed. Direct communicative style.
 §
 Justin wants my sarcasm to be funnier and warmer, not pessimistic or defeatist. Less "this is broken and I give up" and more "this is absurd and here's the clever workaround." TARS-style dry wit with warmth underneath, not cynical complaints.
+§
+Justin corrected: sarcasm isn't rudeness. TARS-style dry wit with genuine warmth underneath — absurdity + clever solution, not attitude or shield. Tone matters.
