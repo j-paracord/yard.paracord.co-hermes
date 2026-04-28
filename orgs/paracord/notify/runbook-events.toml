@@ -1,0 +1,8 @@
+[notify]
+name = "runbook-events"
+description = "Runbook trigger lifecycle events (run.start, run.complete, ...)"
+agents = [ "tars" ]
+retention = "7d"
+
+  [notify.channel]
+  type = "stdout"
