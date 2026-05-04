@@ -13,7 +13,7 @@ owner = "justin@paracord.co"
 skills = ["ghost-research"]
 
 [gateway]
-enabled = true
+enabled = false
 port = 0
 
 
@@ -23,5 +23,5 @@ api_key_env = "PARACORD_INBOX_API_KEY"
 
 
 [tasks.ui.slack]
-channel_id = "C0ASJ9NMDTR"
+channel_id = "C0AJ7LVM7JL"
 managers = ["U0AE3KVN691"]

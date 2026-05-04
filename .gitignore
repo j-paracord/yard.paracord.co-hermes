@@ -10,9 +10,17 @@ orgs/**/.env.local
 .DS_Store
 
 # agent runtime artifacts (regenerated on agent start/shutdown)
-orgs/*/agents/*/.hermes_history
+orgs/*/agents/*/.hermes_history*
 orgs/*/agents/*/.clean_shutdown
 orgs/*/agents/*/.update_check
 orgs/*/agents/*/interrupt_debug.log
 orgs/*/agents/*/.trigger.env
 orgs/*/agents/*/.trigger-state
+
+orgs/*/agents/*/context_length_cache.yaml
+
+orgs/*/agents/*/gateway.lock
+
+orgs/*/agents/*/skills/.bundled_manifest-remote-conflict
+
+orgs/*/agents/*/skills/.curator_state

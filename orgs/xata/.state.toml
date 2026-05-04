@@ -6,18 +6,28 @@ public_ip = "161.35.238.63"
 private_ip = "10.124.0.4"
 provisioned_at = "2026-04-16T16:42:58.051Z"
 hermes_installed = true
-hermes_installed_at = "2026-04-16T16:50:50.795Z"
+hermes_installed_at = "2026-05-04T19:12:35.390Z"
 
 [agents.scout]
 vm_name = "yard-xata"
 linux_user = "hm-scout"
-last_synced_at = "2026-04-27T20:59:28.568Z"
+last_synced_at = "2026-05-04T20:15:01.544Z"
 last_pulled_at = "2026-04-19T17:00:26.363Z"
 hermes_profile_created = true
-gateway_installed = true
-last_verified_at = "2026-05-04T18:18:42.158Z"
-last_verify_status = "fail"
-last_verify_errors = [ "gateway unit hermes-gateway-scout is not active" ]
+gateway_installed = false
+last_verified_at = "2026-05-04T20:15:28.783Z"
+last_verify_status = "pass"
+last_verify_errors = [ ]
+
+  [agents.scout.synced_files]
+  ".update_check" = "76ce8bed12256e8e655d5437beddd76dbf66d5e854e2e44793fc1bfd066cd670"
+  "gateway.lock" = "5a4012df57599af5171a40ed354ff23fca29d35adff19dddc406f67bc2ffb7ed"
+  "skills/.curator_state" = "e5130fdebc5ba5be14653ba8147d9bda7780a9ba738efc1d22b2e1587c053d84"
+  "skills/yuanbao/SKILL.md" = "09a35b811406e00e69b41b1ea86bf2b9d0ac9c0a7abc88f3832a7747717cc3c3"
+  "config.yaml" = "a00592bf780b537e3bb5d8940ebcf4bfad93257a7cc9e723dac86f66234303db"
+  "skills/.bundled_manifest" = "30432a7a325d014582c95f59f5e8ff25ca085dbacba3a22d6058a7c9b98a3002"
+  "context_length_cache.yaml" = "54dc95129e38f9c436b14bf32e6d2a32c6f34dfc9470cb817449ad11784df1d6"
+  ".hermes_history" = "8c50b130cfb676a31bc80f96002f1cdfba4bdd42b6f2e9f7fbe671fc533c13da"
 
 [agents.scout.trigger_cursors.runbooks]
 id = "1777057990312-0"

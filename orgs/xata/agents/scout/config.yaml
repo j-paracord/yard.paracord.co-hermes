@@ -17,15 +17,20 @@
 # `hermes config set model.model <x>` writes to model.model and is promoted to
 # model.default at load time (see hermes_cli/runtime_provider.py::_get_model_config).
 # NOTE: there is NO `model.name` key — that is a hermes-manager typo, not a real field.
-model:
-  default: "anthropic/claude-haiku-4-5"
 
+model:
+  default: "gpt-5.5"
+  provider: "openai-codex"
+
+fallback_model:
+  model: "anthropic/claude-haiku-4-5"
+  provider: "openrouter"
   # Inference provider. "auto" picks the best available credential from .env.
   # Valid: auto | openrouter | nous | nous-api | anthropic | openai-codex |
   #        copilot | gemini | zai | kimi-coding | minimax | minimax-cn |
   #        huggingface | xiaomi | kilocode | ai-gateway | custom
   #        (custom aliases: lmstudio, ollama, vllm, llamacpp)
-  provider: "openrouter"
+  
 
   # base_url: "https://openrouter.ai/api/v1"  # usually inferred from provider
   # api_key:  ""                               # prefer setting OPENROUTER_API_KEY in .env
