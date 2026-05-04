@@ -1,3 +1,5 @@
+upstash_db_id = "41a2230d-022e-4901-8c16-8f13217e5540"
+
 [vms.yard-xata]
 droplet_id = 565_333_452
 public_ip = "161.35.238.63"
@@ -13,3 +15,11 @@ last_synced_at = "2026-04-27T20:59:28.568Z"
 last_pulled_at = "2026-04-19T17:00:26.363Z"
 hermes_profile_created = true
 gateway_installed = true
+last_verified_at = "2026-05-04T18:18:42.158Z"
+last_verify_status = "fail"
+last_verify_errors = [ "gateway unit hermes-gateway-scout is not active" ]
+
+[agents.scout.trigger_cursors.runbooks]
+id = "1777057990312-0"
+sampled_at = "2026-05-04T18:21:54.915Z"
+last_stream_id = "1777057990312-0"

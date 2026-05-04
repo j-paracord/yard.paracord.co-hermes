@@ -27,3 +27,7 @@ config = "ops" # inferred from doppler token
 repo = "paracord-clients/xatabase-finance-assistant"
 # branch defaults to "main"
 # path defaults to /home/hm-scout/repos/xatabase-finance-assistant
+
+[model]
+provider = "openai-codex"
+default = "gpt-5-codex"
