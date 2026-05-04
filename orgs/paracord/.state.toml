@@ -11,11 +11,11 @@ hermes_installed_at = "2026-05-04T19:16:49.671Z"
 [agents.cooper]
 vm_name = "paracord1"
 linux_user = "hm-cooper"
-last_synced_at = "2026-05-04T19:40:12.688Z"
+last_synced_at = "2026-05-04T20:26:29.719Z"
 last_pulled_at = "2026-04-15T21:42:17.970Z"
 hermes_profile_created = true
 gateway_installed = false
-last_verified_at = "2026-05-04T19:40:30.369Z"
+last_verified_at = "2026-05-04T20:26:44.655Z"
 last_verify_status = "skipped"
 last_verify_errors = [ ]
 
@@ -26,4 +26,6 @@ last_verify_errors = [ ]
   "skills/.curator_state" = "25551413e3361e7a8ea1c612d0f9c14c336661def63c13b5f23cbcca926d0cfd"
   "skills/yuanbao/SKILL.md" = "09a35b811406e00e69b41b1ea86bf2b9d0ac9c0a7abc88f3832a7747717cc3c3"
   ".hermes_history" = "c87af88703f9f4c8065b2f97c4e8e542bc182aa2ec0cf833883304377844074b"
-  "skills/.bundled_manifest" = "2488f1beb5c2a09b5428819a6e987656a2e5b71f07488068e730b30e956e9f26"
+  "skills/.bundled_manifest" = "2c3201aef29b1af789f8085b5957669d3b50c73fdd95c30969793752878a967d"
+  "gateway.lock" = "4f4ace9c298416820a97ad845ce6d5c3ad935e3893ed4437a71e86a74f2cce8c"
+  "config.yaml" = "b7400b0320f2954822e5facd3b3346fac4e616c6ebcdc68f40509ddcecf86146"

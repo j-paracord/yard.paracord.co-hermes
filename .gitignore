@@ -24,3 +24,4 @@ orgs/*/agents/*/gateway.lock
 orgs/*/agents/*/skills/.bundled_manifest-remote-conflict
 
 orgs/*/agents/*/skills/.curator_state
+orgs/*/agents/*/skills/.bundled_manifest
