@@ -28,6 +28,20 @@ repo = "paracord-clients/xatabase-finance-assistant"
 # branch defaults to "main"
 # path defaults to /home/hm-scout/repos/xatabase-finance-assistant
 
-# [model]
-# provider = "openai-codex"
-# default = "gpt-5-codex"
+# Autonomous self-heal fix-run loop for the runbook trigger consumer. On a
+# failed `wb` run, scout's `agent-chat` reviews the error output + runbook
+# source, returns a corrected version, and the consumer re-runs it, up to
+# max_fix_runs times before giving up (then the operator heal-pr path takes
+# over). See hermes-manager docs/scout-heal-loop.md → "Automated fix-run loop".
+[heal]
+# enabled defaults to true when this block is present
+max_fix_runs = 5
+
+# Manager-owned model settings, rendered into the profile config.yaml on
+# every `hm sync`. gpt-5.5 is the current Codex default recommendation and
+# what this profile's config.yaml already runs; keeping it here makes the
+# choice durable across resyncs. Codex auth lives on the droplet
+# (`hm agent auth codex --name scout`), not in .env.
+[model]
+provider = "openai-codex"
+default = "gpt-5.5"
